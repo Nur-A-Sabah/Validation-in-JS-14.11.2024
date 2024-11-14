@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: beige;
+        font-weight: bold;
+        font-family: cursive;
+      }
+      p {
+        color: rgb(104, 3, 3);
+      }
+      #id1 {
+        color: #b508a1;
+      }
+      #id2 {
+        color: #b50881;
+      }
+      #id3 {
+        color: #8d08b5;
+      }
+      #h {
+        color: #03860c;
+      }
+      h1 {
+        color: #00bbb2;
+      }
+      h3 {
+        color: #3edba7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my app</h1>
+    <h3>Please submit you name and age 👇🏻</h3>
+    <form id="h" name="myForm" onsubmit="validateForm()">
+      Name: <input id="id1" type="text" name="fname" /> <br /><br />
+      Age: <input id="id2" type="number" min="18" /> <br /><br />
+      <input id="id3" type="submit" value="Submit" />
+
+      <p id="message"></p>
+    </form>
+
+    <script>
+      function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+        var y = document.forms["myForm"]["id1"].value;
+        if (x == "" || y == "") {
+          alert("Name / age must be filled out");
+          return false;
+        } else {
+          document.write("Name submitted");
+        }
+      }
+    </script>
+  </body>
+</html>
